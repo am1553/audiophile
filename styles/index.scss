@@ -1,0 +1,38 @@
+@import './general/Variables';
+@import './general/Typography';
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    button {
+        border: none;
+        cursor: pointer;
+    }
+    .button_one, .button_two {
+        width: 10rem;
+        height: 3rem;
+        transition: all 500ms ease;
+        text-transform: uppercase;
+    }
+    .button_one {
+        background-color: $raw-sienna;
+        color: $white;
+    }
+    .button_two {
+        background-color: $white;
+        border: $black;
+        color: $black;
+    }
+    .button_one:hover {
+        background-color: $hit-pink;
+    }
+    .button_two:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+@import './pages/Home';
