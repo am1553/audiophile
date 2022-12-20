@@ -1,11 +1,10 @@
 import React from 'react';
-import Counter from './components/form/Counter';
-
+import Header from './components/ui/Header';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Header />
     </div>
   );
 }
