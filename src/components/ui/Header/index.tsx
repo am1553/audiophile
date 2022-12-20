@@ -11,9 +11,6 @@ function Header() {
           <Logo />
         </div>
       </div>
-      <div className="max-lg:hidden">
-
-      </div>
       <CartButton />
     </header>
   )
