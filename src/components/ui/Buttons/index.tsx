@@ -32,7 +32,7 @@ export const TransparentButton = () => {
 
 export const MenuButton = () => {
     return(
-        <button className='hamburger_menu'>
+        <button className='hamburger_menu md:hidden'>
             <div className="pointer-events-none line"></div>
         </button>
     )
