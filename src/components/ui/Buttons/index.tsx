@@ -1,11 +1,16 @@
 import Arrow from '../../../assets/shared/desktop/icon-arrow-right.svg'
 import Cart from '../../../assets/shared/desktop/icon-cart.svg'
 import './index.css'
-export const PrimaryButton = () => {
+
+type PrimaryButtonTypes = {
+    text: string
+}
+
+export const PrimaryButton = ({text} : PrimaryButtonTypes) => {
     return(
         <button className="h-12 w-40 bg-peru text-white hover:bg-desaturated-peru transition-colors">
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
-                See Product
+                {text}
             </span>
         </button>
     )
