@@ -10,11 +10,11 @@ Following are the components in the component folder which are easily reusable.
 
 This consists of all the layout components and buttons.
 
-#### Buttons
+##### Buttons
 
 This file contains all the buttons used for this web application, where onClick events and button text will be passed as props.
 
-#### Header
+##### Header
 
 This file contains the Header which will be responsive across all devices.
 

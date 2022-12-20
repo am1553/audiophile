@@ -8,6 +8,7 @@ module.exports = {
     colors: {
       "peru": "#D87D4A",
       "desaturated-black": "#101010",
+      "grey": "#979797",
       "light-grey": "#f1f1f1",
       "offwhite": "#fafafa",
       "desaturated-peru": "#fbaf85",
