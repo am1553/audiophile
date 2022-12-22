@@ -18,9 +18,9 @@ function Intro() {
 
     const Information = () => {
         return(
-        <div className="text-center flex flex-col items-center gap-8 absolute top-72 left-2/4 max-lg:-translate-x-2/4 max-w-md lg:text-left lg:items-start lg:left-0">
+        <div className="text-center max-w-md w-full flex flex-col items-center gap-8 absolute max-sm:top-[50vw] md:pl-16 max-lg:top-[30vw] lg:top-72 left-2/4 max-lg:-translate-x-2/4  lg:text-left lg:items-start lg:left-0 z-10">
             <span className="tracking-[10px] uppercase text-grey"> new product</span>
-            <h1 className='text-h1 uppercase text-white'>
+            <h1 className='text-white'>
                 XX99 Mark II Headphones
             </h1>
             <p className='text-white opacity-50'>
@@ -32,7 +32,8 @@ function Intro() {
     }
 
   return (
-    <div className='w-full bg-[#191919] relative'>
+    <div className='w-full bg-[#191919] relative py-12'>
+        <div className="absolute left-0 right-0 top-0 bottom-0 bg-gradient-to-r from-black to-[#ffffff05] z-10"></div>
         <div className="lg:flex w-full justify-end max-w-7xl mx-auto relative">
             <HeroImage />
             <Information />

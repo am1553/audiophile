@@ -16,9 +16,10 @@ export const PrimaryButton = ({text} : PrimaryButtonTypes) => {
     )
 }
 
-export const SecondaryButton = () => {
+export const SecondaryButton = ({black}:{black? : boolean}) => {
+
     return(
-        <button className="bg-white border h-12 w-40 hover:border-none hover:bg-black hover:text-white transition-colors">
+        <button className={`${black ? "bg-black border border-black hover:bg-opacity-0 hover:text-black" : "bg-opacity-0 border border-black text-black hover:bg-black hover:text-white"} h-12 w-40 transition-colors`}>
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
                 See Product
             </span>
