@@ -1,5 +1,7 @@
+import React, { SetStateAction, useContext } from 'react'
 import Arrow from '../../../assets/shared/desktop/icon-arrow-right.svg'
 import Cart from '../../../assets/shared/desktop/icon-cart.svg'
+import { MenuContext } from '../../../context/MenuContext'
 import './index.css'
 
 type PrimaryButtonTypes = {
@@ -36,9 +38,10 @@ export const TransparentButton = () => {
     )
 }
 
-export const MenuButton = () => {
+export const MenuButton = ({menu} : {menu:boolean}) => {
+    const toggleMenu = useContext(MenuContext)[1]
     return(
-        <button className='hamburger_menu md:hidden'>
+        <button className='hamburger_menu md:hidden' onClick={() => toggleMenu()}>
             <div className="pointer-events-none line"></div>
         </button>
     )
