@@ -41,7 +41,7 @@ export const TransparentButton = () => {
 export const MenuButton = ({menu} : {menu:boolean}) => {
     const toggleMenu = useContext(MenuContext)[1]
     return(
-        <button className='hamburger_menu md:hidden' onClick={() => toggleMenu()}>
+        <button className='hamburger_menu lg:hidden' onClick={() => toggleMenu()}>
             <div className="pointer-events-none line"></div>
         </button>
     )
