@@ -2,7 +2,7 @@ import React, { SetStateAction } from 'react'
 import { EarphonesCard, HeadphonesCard, SpeakersCard } from '../CategoryCard'
 
 type MenuProps = {
-  menu: boolean
+  menu?: boolean
 }
 
 function Menu({menu} : MenuProps) {

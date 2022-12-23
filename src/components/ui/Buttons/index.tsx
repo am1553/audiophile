@@ -5,10 +5,11 @@ import { MenuContext } from '../../../context/MenuContext'
 import './index.css'
 
 type PrimaryButtonTypes = {
-    text: string
+    text: string;
+    onClick?: () => void
 }
 
-export const PrimaryButton = ({text} : PrimaryButtonTypes) => {
+export const PrimaryButton = ({text, onClick} : PrimaryButtonTypes) => {
     return(
         <button className="h-12 w-40 bg-peru text-white hover:bg-desaturated-peru transition-colors">
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
@@ -29,9 +30,9 @@ export const SecondaryButton = ({black}:{black? : boolean}) => {
     )
 }
 
-export const TransparentButton = () => {
+export const TransparentButton = ({onClick} : {onClick : () => void}) => {
     return(
-        <button className='h-12 w-40 flex items-center justify-center gap-2 uppercase text-sub-title hover:text-peru text-[#00000050] transition-colors'>
+        <button className='h-12 w-40 flex items-center justify-center gap-2 uppercase text-sub-title hover:text-peru text-[#00000050] transition-colors' onClick={onClick}>
             <span className='font-semibold'>Shop</span>
             <img src={Arrow} alt="" />
         </button>
