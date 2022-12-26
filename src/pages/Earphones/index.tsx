@@ -1,8 +1,11 @@
 import React from 'react'
+import Banner from '../../components/ui/Banner'
 
 function Earphones() {
   return (
-    <div>index</div>
+    <div>
+      <Banner title='Earphones'/>
+    </div>
   )
 }
 
