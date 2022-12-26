@@ -2,11 +2,11 @@ import React, { useContext } from 'react'
 import { MenuContext } from '../../../context/MenuContext'
 import { CartButton, MenuButton } from '../Buttons'
 import { Logo } from '../Logo'
+import {Link} from 'react-router-dom'
 
 function Main() {
 
     const menu = useContext(MenuContext)[0]
-
     return(
         <header className='fixed h-24 px-10 w-screen left-[50%] -translate-x-[50%] border-b-[1px] border-b-grey border-opacity-20 z-50  backdrop-blur-2xl bg-black bg-opacity-50'>
   
@@ -24,10 +24,10 @@ function Main() {
             
 
             <nav className='text-white list-none flex gap-8 font-bold uppercase max-lg:hidden'>
-                <li className='text-sub-title'>Home</li>
-                <li className='text-sub-title'>Headphones</li>
-                <li className='text-sub-title'>Speakers</li>
-                <li className='text-sub-title'>Earphones</li>
+                <Link to="/" className='text-sub-title'>Home</Link>
+                <Link to="/headphones" className='text-sub-title'>Headphones</Link>
+                <Link to="/speakers" className='text-sub-title'>Speakers</Link>
+                <Link to="/earphones" className='text-sub-title'>Earphones</Link>
             </nav>
   
             <CartButton />
