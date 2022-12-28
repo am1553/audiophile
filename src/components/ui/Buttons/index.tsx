@@ -11,7 +11,7 @@ type PrimaryButtonTypes = {
 
 export const PrimaryButton = ({text, onClick} : PrimaryButtonTypes) => {
     return(
-        <button className="h-12 w-40 bg-peru text-white hover:bg-desaturated-peru transition-colors">
+        <button className="h-12 w-full max-w-[200px] bg-peru text-white hover:bg-desaturated-peru transition-colors" onClick={onClick}>
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
                 {text}
             </span>

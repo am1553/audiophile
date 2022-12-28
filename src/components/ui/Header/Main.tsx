@@ -8,7 +8,7 @@ function Main() {
 
     const menu = useContext(MenuContext)[0]
     return(
-        <header className='fixed h-24 px-10 w-screen left-[50%] -translate-x-[50%] border-b-[1px] border-b-grey border-opacity-20 z-50  backdrop-blur-2xl bg-black bg-opacity-50'>
+        <header className='fixed h-24 px-10 w-screen left-[50%] -translate-x-[50%] border-b-[1px] border-b-grey border-opacity-20 z-50 bg-black'>
   
           <div className="flex items-center justify-between h-full max-w-7xl mx-auto">
   

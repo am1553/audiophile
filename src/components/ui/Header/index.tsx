@@ -30,7 +30,6 @@ function Header() {
           <Modal open={menu} toggleOpen={toggleMenu} />
           : null
         }
-        
     </div>
   )
 }
