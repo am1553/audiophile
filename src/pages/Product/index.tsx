@@ -6,7 +6,7 @@ const Product = () => {
 
 
   return (
-    <div className='pt-32 flex flex-col gap-24'>
+    <div className='pt-32 flex flex-col gap-48'>
       <main className="max-w-5xl mx-auto px-8">
         <button className='mb-8' onClick={() => window.history.go(-1)}>Go Back</button>
         <Card />

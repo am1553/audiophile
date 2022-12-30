@@ -3,10 +3,12 @@ import EarphoneImageMobile from '../../../assets/home/mobile/image-earphones-yx1
 import EarphoneImageTablet from '../../../assets/home/tablet/image-earphones-yx1.jpg'
 import EarphoneImageDesktop from '../../../assets/home/desktop/image-earphones-yx1.jpg'
 import { SecondaryButton } from '../../../components/ui/Buttons'
+import { useNavigate } from 'react-router-dom'
 
 
 function Earphones() {
 
+  let navigate = useNavigate()
 
   const HeroImage = () => {
     return(
@@ -22,7 +24,7 @@ function Earphones() {
     return(
       <div className="bg-light-grey px-8 py-16 flex flex-col gap-8 rounded-lg justify-center md:px-16">
         <h4 className='text-black'>YX1 EARPHONES</h4>
-        <SecondaryButton />
+        <SecondaryButton onClick={() => navigate('product/earphones/yx1-earphones')}/>
       </div>
     )
   }

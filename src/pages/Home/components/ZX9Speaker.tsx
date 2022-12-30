@@ -4,9 +4,10 @@ import ZX9ImageMobile from '../../../assets/home/mobile/image-speaker-zx9.png'
 import ZX9ImageTablet from '../../../assets/home/tablet/image-speaker-zx9.png'
 import ZX9ImageDesktop from '../../../assets/home/desktop/image-speaker-zx9.png'
 import CirclePatternImage from '../../../assets/home/desktop/pattern-circles.svg'
+import { useNavigate } from 'react-router-dom'
 
 function ZX9Speaker() {
-
+  let navigate = useNavigate()
   const HeroImage = () => {
     return(
       <div className="">
@@ -24,7 +25,7 @@ function ZX9Speaker() {
         <p className='opacity-70 w-[80%] lg:w-[90%]'>
         Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
         </p>
-        <SecondaryButton black/>
+        <SecondaryButton black onClick={() => navigate('product/speakers/zx9-speaker')}/>
       </div>
     )
   }

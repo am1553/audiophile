@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Header from './components/ui/Header';
+import ScrollToTop from './components/ui/ScrollToTop';
 import MenuProvider from './context/MenuContext';
 import Earphones from './pages/Earphones';
 import ErrorPage from './pages/ErrorPage';
@@ -16,24 +17,26 @@ function App() {
         <MenuProvider>
           <Header />
         </MenuProvider>
-        <Routes>
-          <Route 
-            path='/*' 
-            element={<ErrorPage />}
-          />
-          <Route 
-            path='/' 
-            element={<Home />}
-          />
-          <Route 
-            path='/headphones' 
-            element={<Headphones />}
-          />
-          
-          <Route path='/speakers' element={<Speakers />}/>
-          <Route path='/earphones' element={<Earphones />}/>
-          <Route path='/product/:category/:slug' element={<Product />}/>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route 
+              path='/*' 
+              element={<ErrorPage />}
+            />
+            <Route 
+              path='/' 
+              element={<Home />}
+            />
+            <Route 
+              path='/headphones' 
+              element={<Headphones />}
+            />
+            
+            <Route path='/speakers' element={<Speakers />}/>
+            <Route path='/earphones' element={<Earphones />}/>
+            <Route path='/product/:category/:slug' element={<Product />}/>
+          </Routes>
+        </ScrollToTop>
       </div>
     </Router>
   );

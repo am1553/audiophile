@@ -95,7 +95,6 @@ import ZX9SpeakersDesktop2 from '../../../../assets/product-zx9-speaker/desktop/
 import ZX9SpeakersDesktop3 from '../../../../assets/product-zx9-speaker/desktop/image-gallery-3.jpg'
 
 
-
 export const ProductImages = [
     {
         slug: 'xx99-mark-two-headphones',

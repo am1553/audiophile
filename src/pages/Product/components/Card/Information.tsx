@@ -9,6 +9,11 @@ export const Information = () => {
     const category = useParams().category
     const slug = useParams().slug
     const data = Data.filter(data => data.category === category && data.slug === slug)[0]
+
+    const addToCart = () => {
+        return null
+    }
+
     return(
         <div className="flex flex-col gap-8 pt-12">
             {
@@ -24,7 +29,7 @@ export const Information = () => {
             <h6>${data.price.toFixed(0)}</h6>
             <div className="flex gap-4 max-w-[300px]">
                 <Counter currentCount={itemCount} onChange={setItemCount}/>
-                <PrimaryButton text='Add to Cart' />
+                <PrimaryButton text='Add to Cart' onClick={addToCart}/>
             </div>
         </div>
     )
