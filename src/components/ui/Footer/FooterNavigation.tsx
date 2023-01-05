@@ -3,6 +3,7 @@ import { Logo } from '../Logo'
 import FacebookIcon from '../../../assets/shared/desktop/icon-facebook.svg'
 import TwitterIcon from '../../../assets/shared/desktop/icon-twitter.svg'
 import InstagramIcon from '../../../assets/shared/desktop/icon-instagram.svg'
+import { Link } from 'react-router-dom'
 
 
 
@@ -17,10 +18,18 @@ function FooterNavigation() {
     const Navigation = () => {
         return(
             <nav className='flex flex-col md:flex-row gap-6 md:gap-16'>
-                <li className='text-sub-title font-bold uppercase'>Home</li>
-                <li className='text-sub-title font-bold uppercase'>Headphones</li>
-                <li className='text-sub-title font-bold uppercase'>Speakers</li>
-                <li className='text-sub-title font-bold uppercase'>Earphones</li>
+                <Link to="/">
+                    <li className='text-sub-title font-bold uppercase'>Home</li>
+                </Link>
+                <Link to="/headphones">
+                    <li className='text-sub-title font-bold uppercase'>Headphones</li>
+                </Link>
+                <Link to="/speakers">
+                    <li className='text-sub-title font-bold uppercase'>Speakers</li>
+                </Link>
+                <Link to="/earphones">
+                    <li className='text-sub-title font-bold uppercase'>Earphones</li>
+                </Link>
             </nav>
         )
     }
@@ -42,9 +51,17 @@ function FooterNavigation() {
     const Socials = () => {
         return(
             <div className="flex gap-6 md:row-start-2 md:place-content-end lg:row-span-2">
-                <img src={FacebookIcon} alt="" />
-                <img src={TwitterIcon} alt="" />
-                <img src={InstagramIcon} alt="" />
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src={FacebookIcon} alt="" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src={TwitterIcon} alt="" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src={InstagramIcon} alt="" />
+                </a>
+                
+                
             </div>
         )
     }

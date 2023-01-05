@@ -6,12 +6,12 @@ import './index.css'
 
 type PrimaryButtonTypes = {
     text: string;
-    onClick?: () => void
+    onClick: () => void
 }
 
 export const PrimaryButton = ({text, onClick} : PrimaryButtonTypes) => {
     return(
-        <button className="h-12 w-40 bg-peru text-white hover:bg-desaturated-peru transition-colors">
+        <button className="h-12 w-full max-w-[200px] bg-peru text-white hover:bg-desaturated-peru transition-colors" onClick={onClick}>
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
                 {text}
             </span>
@@ -19,10 +19,10 @@ export const PrimaryButton = ({text, onClick} : PrimaryButtonTypes) => {
     )
 }
 
-export const SecondaryButton = ({black}:{black? : boolean}) => {
+export const SecondaryButton = ({black, onClick}:{black? : boolean, onClick: () => void}) => {
 
     return(
-        <button className={`${black ? "bg-black border border-black hover:bg-opacity-0 hover:text-black" : "bg-opacity-0 border border-black text-black hover:bg-black hover:text-white"} h-12 w-40 transition-colors`}>
+        <button className={`${black ? "bg-black border border-black hover:bg-opacity-0 hover:text-black" : "bg-opacity-0 border border-black text-black hover:bg-black hover:text-white"} h-12 w-40 transition-colors`} onClick={onClick}>
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
                 See Product
             </span>
@@ -39,14 +39,7 @@ export const TransparentButton = ({onClick} : {onClick : () => void}) => {
     )
 }
 
-export const MenuButton = ({menu} : {menu:boolean}) => {
-    const toggleMenu = useContext(MenuContext)[1]
-    return(
-        <button className='hamburger_menu lg:hidden' onClick={() => toggleMenu()}>
-            <div className="pointer-events-none line"></div>
-        </button>
-    )
-}
+
 
 export const CartButton = () => {
     return(

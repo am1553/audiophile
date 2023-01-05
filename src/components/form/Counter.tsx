@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
+import React, { SetStateAction, useState } from 'react'
 
-function Counter() {
 
-    const [count, setCount] = useState<number>(4)
+type CounterProps = {
+  currentCount: number;
+  onChange: React.Dispatch<SetStateAction<number>>;
+}
 
-    const increaseCount = () => setCount(count + 1);
-    const decreaseCount = () => setCount(count === 0 ? 0 : count - 1)
+function Counter({currentCount, onChange}: CounterProps) {
+
+
+    const increaseCount = () => onChange(currentCount + 1);
+    const decreaseCount = () => onChange(currentCount === 0 ? 0 : currentCount - 1)
 
   return (
-    <div className='h-12 bg-light-grey w-fit'>
-        <button className='w-10 opacity-20 h-full hover:text-peru hover:opacity-100' onClick={decreaseCount}>
+    <div className='h-12 bg-light-grey w-full grid grid-cols-3 items-center text-center'>
+        <button className='opacity-20 h-full hover:text-peru hover:opacity-100' onClick={decreaseCount}>
             -
         </button>
-        <span>{count}</span>
-        <button className='w-10 opacity-20 h-full hover:text-peru hover:opacity-100' onClick={increaseCount}>
+        <span>{currentCount}</span>
+        <button className='opacity-20 h-full hover:text-peru hover:opacity-100' onClick={increaseCount}>
             +
         </button>
     </div>

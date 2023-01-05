@@ -3,9 +3,10 @@ import HeroImageMobile from '../../../assets/home/mobile/image-header.jpg'
 import HeroImageTablet from '../../../assets/home/tablet/image-header.jpg'
 import HeroImageDesktop from '../../../assets/home/desktop/image-hero.jpg'
 import { PrimaryButton } from '../../../components/ui/Buttons'
+import { useNavigate } from 'react-router-dom'
 
 function Intro() {
-
+    let navigate = useNavigate()
     const HeroImage = () => {
         return(
             <div className="">
@@ -26,7 +27,7 @@ function Intro() {
             <p className='text-white opacity-50'>
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
             </p>
-            <PrimaryButton text="see product"/>
+            <PrimaryButton text="see product" onClick={() => navigate('product/headphones/xx99-mark-two-headphones')}/>
         </div>
         )
     }
