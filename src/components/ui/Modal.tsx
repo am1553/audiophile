@@ -13,7 +13,7 @@ const Modal : React.FC<ModalProps> = ({open, toggleOpen, children}) => {
     return ReactDOM.createPortal(
         <>
         <div className="fixed top-0 bottom-0 left-0 right-0 bg-black opacity-50 z-40" onClick={() => toggleOpen(false)}></div>
-        <div className="">
+        <div className="relative z-50">
             {children}
         </div>
         </>, document.getElementById("portal")!

@@ -1,17 +1,17 @@
 import React, { SetStateAction, useContext } from 'react'
 import Arrow from '../../../assets/shared/desktop/icon-arrow-right.svg'
-import Cart from '../../../assets/shared/desktop/icon-cart.svg'
-import { MenuContext } from '../../../context/MenuContext'
+
 import './index.css'
 
 type PrimaryButtonTypes = {
     text: string;
-    onClick: () => void
+    onClick: () => void;
+    className?: string
 }
 
-export const PrimaryButton = ({text, onClick} : PrimaryButtonTypes) => {
+export const PrimaryButton = ({text, onClick, className} : PrimaryButtonTypes) => {
     return(
-        <button className="h-12 w-full max-w-[200px] bg-peru text-white hover:bg-desaturated-peru transition-colors" onClick={onClick}>
+        <button className={`h-12 w-full  bg-peru text-white hover:bg-desaturated-peru transition-colors ${className ? null : "max-w-[200px]"}`} onClick={onClick}>
             <span className="text-sub-title uppercase font-semibold pointer-events-none">
                 {text}
             </span>
@@ -40,11 +40,3 @@ export const TransparentButton = ({onClick} : {onClick : () => void}) => {
 }
 
 
-
-export const CartButton = () => {
-    return(
-        <button>
-            <img src={Cart} alt="" className='pointer-events-none'/>
-        </button>
-    )
-}

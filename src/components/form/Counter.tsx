@@ -8,7 +8,6 @@ type CounterProps = {
 
 function Counter({currentCount, onChange}: CounterProps) {
 
-
     const increaseCount = () => onChange(currentCount + 1);
     const decreaseCount = () => onChange(currentCount === 0 ? 0 : currentCount - 1)
 
