@@ -1,6 +1,7 @@
 import { useContext, useEffect} from 'react'
+import { CartContext } from '../../../context/CartContext'
 import { MenuContext } from '../../../context/MenuContext'
-import { CartButton } from '../Buttons'
+import Cart from '../Cart'
 import { Logo } from '../Logo'
 import Menu from '../Menu'
 import Modal from '../Modal'
@@ -11,15 +12,19 @@ function Header() {
   const menu = useContext(MenuContext)[0]
   const toggleMenu = useContext(MenuContext)[1]
 
+  const cart = useContext(CartContext)[0]
+  const toggleCart = useContext(CartContext)[1]
 
   return (
-    <div className="">
+    <div className="relative"> 
         <Main />
-        <Menu menu={menu} />
-        {
-          menu ? 
-          <Modal open={menu} toggleOpen={toggleMenu} />
-          : null
+        { menu ? <Modal open={menu} toggleOpen={toggleMenu} /> : null }
+        { 
+          cart ? 
+            <Modal open={cart} toggleOpen={toggleCart}>
+              
+            </Modal> 
+          : null 
         }
     </div>
   )
