@@ -14,7 +14,7 @@ import Speakers from './pages/Speakers';
 
 function App() {
   return (
-    <Router >
+    <Router basename='/'>
       <div className="App bg-offwhite">
         <MenuProvider>
           <CartProvider>
@@ -28,7 +28,7 @@ function App() {
               element={<ErrorPage />}
             />
             <Route 
-              path='/' 
+              path='' 
               element={<Home />}
             />
             <Route 
