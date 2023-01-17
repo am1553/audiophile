@@ -2,10 +2,12 @@ import React from 'react'
 import AboutAudioGear from './AboutAudioGear'
 import FooterNavigation from './FooterNavigation'
 
-function Footer() {
+function Footer({custom} : {custom?:boolean}) {
   return (
     <footer className='flex flex-col gap-36'>
-        <AboutAudioGear />
+        {
+          custom ? null : <AboutAudioGear />
+        }
         <FooterNavigation />
     </footer>
   )

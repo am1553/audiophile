@@ -9,10 +9,9 @@ type InputTypes = {
 function Input({label, onChange, placeholder} : InputTypes) {
     const [error, setError] = useState<boolean>(false)
     return(
-        <div className={`flex flex-col gap-2 w-full md:max-w-[309px] ${error ? "text-[#CD2C2C]" : "text-black"}`}>
+        <div className={`flex flex-col gap-2 w-full ${error ? "text-[#CD2C2C]" : "text-black"}`}>
             <div className="text-[12px] flex justify-between">
                 <label htmlFor="" className="font-bold">{label}</label>
-                <span>Wrong format</span>
             </div>
             <input 
                 placeholder={placeholder}

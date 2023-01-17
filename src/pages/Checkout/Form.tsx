@@ -26,77 +26,85 @@ function Form() {
     <form className='bg-white p-10 rounded-xl' >
         <h3>checkout</h3>
         <FormSection title={"billing details"}>
-            <Input 
-                label={"Name"}
-                placeholder={formData.name}
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, name: value }))
-                } }
-            />
-            <Input 
-                label={"Email Address"} 
-                placeholder={formData.emailAddress}
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, emailAddress: value }))
-                } }
-            />
-            <Input 
-                label={"Phone Number"} 
-                placeholder={formData.phoneNumber}
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, phoneNumber: value }))
-                } }
-            />
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2">
+                <Input 
+                    label={"Name"}
+                    placeholder={formData.name}
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, name: value }))
+                    } }
+                />
+                <Input 
+                    label={"Email Address"} 
+                    placeholder={formData.emailAddress}
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, emailAddress: value }))
+                    } }
+                />
+                <Input 
+                    label={"Phone Number"} 
+                    placeholder={formData.phoneNumber}
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, phoneNumber: value }))
+                    } }
+                />
+            </div>
         </FormSection>
 
         <FormSection title='shipping info'>
-            <Input 
-                label={"Your Address"} 
-                placeholder = { formData.address.street }
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, address: {...address, street: value} }))
-                } }
-            />
-            <Input 
-                label={"Zip Code"} 
-                placeholder = { formData.address.zipCode }
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, address: {...address, zipCode: value} }))
-                } }
-            />
-            <Input 
-                label={"city"} 
-                placeholder = { formData.address.city }
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, address: {...address, city: value} }))
-                } }
-            />
-            <Input 
-                label={"country"} 
-                placeholder = { formData.address.country }
-                onChange = { (e : ChangeEvent<HTMLInputElement>) => {
-                    const element = e.target as HTMLInputElement
-                    const value = element.value
-                    setFormData((pervState) => ({...pervState, address: {...address, country: value} }))
-                } }
-            />
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-2">
+                <div className="col-span-2">
+                    <Input 
+                        label={"Your Address"} 
+                        placeholder = { formData.address.street }
+                        onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                            const element = e.target as HTMLInputElement
+                            const value = element.value
+                            setFormData((pervState) => ({...pervState, address: {...address, street: value} }))
+                        } }
+                    />
+                </div>
+                <Input 
+                    label={"Zip Code"} 
+                    placeholder = { formData.address.zipCode }
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, address: {...address, zipCode: value} }))
+                    } }
+                />
+                <Input 
+                    label={"City"} 
+                    placeholder = { formData.address.city }
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, address: {...address, city: value} }))
+                    } }
+                />
+                <Input 
+                    label={"country"} 
+                    placeholder = { formData.address.country }
+                    onChange = { (e : ChangeEvent<HTMLInputElement>) => {
+                        const element = e.target as HTMLInputElement
+                        const value = element.value
+                        setFormData((pervState) => ({...pervState, address: {...address, country: value} }))
+                    } }
+                />
+            </div>
         </FormSection>
 
-        <FormSection title='payment method'>
-            <RadioSelect text={"e-Money"} onSelect={() => {}}/>
-            <RadioSelect text={"CashOnDelivery"} onSelect={() => {}}/>
+        <FormSection title='payment details'>
+            <div className="flex flex-col justify-end items-end gap-4">
+                <RadioSelect text={"e-Money"} onSelect={() => {}}/>
+                <RadioSelect text={"Cash On Delivery"} onSelect={() => {}}/>
+            </div>
         </FormSection>
     </form>
   )
