@@ -25,7 +25,7 @@ function Summary({setPurchaseToggleConfirmation} : {setPurchaseToggleConfirmatio
     const ItemCard = ({item} : {item: ItemCardTypes}) => {
         return(
             <div className="flex font-bold gap-4">
-                <img src={item.image} alt="" className='w-20 h-fit rounded-md'/>
+                <img src={item.image} alt="" className='w-20 rounded-md'/>
                 <div className="flex-1 flex-col flex">
                     <span>{item.name}</span>
                     <span className='opacity-30'>${item.total}</span>
