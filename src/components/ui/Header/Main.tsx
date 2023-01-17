@@ -6,7 +6,6 @@ import Menu from '../Menu'
 import { CartContext } from '../../../context/CartContext'
 import CartIcon from '../../../assets/shared/desktop/icon-cart.svg'
 import Cart from '../Cart'
-import Modal from '../Modal'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../app/store'
 function Main() {
