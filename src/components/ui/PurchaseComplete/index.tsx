@@ -1,8 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '../../../app/hooks'
 import { RootState } from '../../../app/store'
 import ConfirmationIcon from '../../../assets/checkout/icon-order-confirmation.svg'
+import { removeAll } from '../../../features/cart/cartSlice'
 import { useTotal } from '../../../hooks/useTotal'
 import { PrimaryButton } from '../Buttons'
 
@@ -11,6 +13,7 @@ function PurchaseComplete() {
   const cartItems = useSelector((state : RootState) => state.cart)
   const firstCartItem = cartItems[0]
   const sum = useTotal()
+  const dispatch = useAppDispatch()
   const ConfirmationMessage = () => (
     <header>
       <img src={ConfirmationIcon} alt="" />
@@ -22,6 +25,7 @@ function PurchaseComplete() {
   const handleNavigate = () => {
     const body = document.getElementsByTagName('body')[0]
     body.style.overflowY = ''
+    dispatch(removeAll())
     navigate('/')
   }
 

@@ -25,8 +25,8 @@ export const ItemCard = ({item}: {item:ItemCardTypes}) => {
         }, [count])
         
     return(
-        <div className="grid grid-cols-[auto_60%_20%] items-center gap-6">
-            <img src={item.image} alt="" className='rounded-md'/>
+        <div className="grid grid-cols-[auto_40%_20%] items-center gap-6">
+            <img src={item.image} alt="" className='rounded-md w-full'/>
             <div className="flex flex-col w-full">
                 <span className='font-bold'>{item.name}</span>
                 <span className='opacity-50 font-bold'>$ {item.price}</span>
